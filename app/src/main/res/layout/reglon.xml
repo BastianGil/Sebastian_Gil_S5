@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Titulo"
+
+        android:id="@+id/item_titulo"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12/26/2018"
+        android:layout_gravity="right"
+        android:textStyle="bold"
+
+        android:id="@+id/item_fecha"
+        />
+
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ehrsethgfs sjiopg hsdh"
+        android:layout_gravity="right"
+        android:textStyle="italic"
+
+
+        android:id="@+id/item_descripcion"
+
+        />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_ir"
+        android:text="Ir a la noticia"
+        />
+
+
+
+</LinearLayout>
+
