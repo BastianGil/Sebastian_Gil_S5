@@ -47,19 +47,19 @@ public class NoticiaAdapter extends BaseAdapter {
         View reglon = inflater.inflate(R.layout.reglon, null,false);
         TextView item_titulo = reglon.findViewById(R.id.item_titulo);
         TextView item_fecha = reglon.findViewById(R.id.item_fecha);
-        TextView item_decripcion = reglon.findViewById(R.id.item_descripcion);
-        Button item_ir = reglon.findViewById(R.id.item_ir);
+        Button btn_llamar = reglon.findViewById(R.id.btn_llamar);
+        Button btn_eliminar = reglon.findViewById(R.id.btn_eliminar);
+
 
 
 
         item_titulo.setText(noticias.get(position).getTitulo());
-        item_decripcion.setText(noticias.get(position).getDescripcion());
         item_fecha.setText(noticias.get(position).getFecha());
-        item_ir.setOnClickListener(new View.OnClickListener() {
+        btn_llamar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //noticias.remove(position);
-               // notifyDataSetChanged();
+                // notifyDataSetChanged();
 
                 Intent intent = new Intent(activity, NoticiaView.class);
                 activity.startActivity(intent);

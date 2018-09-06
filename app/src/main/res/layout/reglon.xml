@@ -1,51 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/botoncurv"
+    android:layout_height="wrap_content"
     android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
+        android:text="Titu"
+        />
+<LinearLayout
+    android:layout_marginLeft="10dp"
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
         android:text="Titulo"
 
         android:id="@+id/item_titulo"
         />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="12/26/2018"
-        android:layout_gravity="right"
-        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:text="frf"
 
         android:id="@+id/item_fecha"
         />
 
 
-    <TextView
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ehrsethgfs sjiopg hsdh"
-        android:layout_gravity="right"
-        android:textStyle="italic"
+</LinearLayout>
 
-
-        android:id="@+id/item_descripcion"
-
-        />
-
-
+    <ImageButton
+        android:background="@drawable/botonr"
+        android:src="@drawable/phone"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_llamar"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/item_ir"
-        android:text="Ir a la noticia"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/botonr"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_eliminar"
         />
+
+
 
 
 

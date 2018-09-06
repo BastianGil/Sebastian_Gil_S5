@@ -1,27 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:background="#007dc1"
 android:orientation="vertical"
-
-
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <Button
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NOTICIA RANDOM"
-        android:id="@+id/btn_generar"
+        android:orientation="horizontal"
+        >
 
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <EditText
+
+                android:layout_marginTop="20dp"
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+
+                android:background="@drawable/botoncurv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/et_titulo"
+
+                />
+
+
+            <EditText
+                android:layout_width="210dp"
+                android:layout_height="40dp"
+                android:background="@drawable/botoncurv"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/et_numero"
+
+                />
+
+            <Switch
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_width="80dp"
+                android:showText="true"
+                android:textOn="M"
+                android:textOff="F"
+                android:layout_height="50dp" />
 
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/et_titulo"
 
-        />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/botoncurv"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:textColor="#014c89"
+            android:text="+"
+            android:id="@+id/btn_generar"
+            />
+
+
+
+
+    </LinearLayout>
+
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
