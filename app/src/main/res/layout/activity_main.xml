@@ -22,11 +22,14 @@ android:orientation="vertical"
                 android:layout_marginTop="20dp"
                 android:layout_width="210dp"
                 android:layout_height="40dp"
-
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textColorHint="#FD005897"
+                android:hint="Nombre"
                 android:background="@drawable/botoncurv"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="20dp"
-                android:id="@+id/et_titulo"
+                android:id="@+id/et_nombre"
 
                 />
 
@@ -34,9 +37,13 @@ android:orientation="vertical"
             <EditText
                 android:layout_width="210dp"
                 android:layout_height="40dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textColorHint="#fd005897"
+                android:hint="Teléfono"
                 android:background="@drawable/botoncurv"
                 android:layout_marginLeft="10dp"
-                android:id="@+id/et_numero"
+                android:id="@+id/et_telefono"
 
                 />
 
@@ -45,9 +52,10 @@ android:orientation="vertical"
                 android:layout_marginLeft="40dp"
                 android:layout_width="80dp"
                 android:showText="true"
-                android:textOn="M"
-                android:textOff="F"
-                android:layout_height="50dp" />
+                android:textOn="F"
+                android:textOff="M"
+                android:layout_height="50dp"
+                android:id="@+id/sh_genero"/>
 
 
 

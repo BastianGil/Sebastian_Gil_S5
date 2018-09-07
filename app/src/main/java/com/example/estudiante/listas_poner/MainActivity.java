@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -16,8 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private ListView lv_noticias;
     NoticiaAdapter customAdapter;
 
-    EditText et_titulo;
+    EditText et_nombre;
+    EditText et_telefono;
+    Switch sh_genero;
     Button btn_generar;
+    String genero;
 
 
     @Override
@@ -26,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        et_titulo=findViewById(R.id.et_titulo);
+        et_nombre=findViewById(R.id.et_nombre);
+        et_telefono =findViewById(R.id.et_telefono);
         btn_generar=findViewById(R.id.btn_generar);
-
+        sh_genero=findViewById(R.id.sh_genero);
 
 
     lv_noticias= findViewById(R.id.lv_noticias);
@@ -37,23 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    final Noticia noticia1=
-            new Noticia("Cambio de logo","30/08/2018","Va aver un cambio en el lkogo de hoy es diseño" );
-        Noticia noticia2=
-                new Noticia("Cambio de logo","30/08/2018","Va aver un cambio en el lkogo de hoy es diseño" );
-
-
-        customAdapter.agregarNoticia(noticia1);
-
-        customAdapter.agregarNoticia(noticia2);
-
         lv_noticias.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
             Noticia noticia_click= (Noticia) customAdapter.getItem(position);
 
-            Toast.makeText(MainActivity.this,noticia_click.getTitulo(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,noticia_click.getNombre(), Toast.LENGTH_SHORT).show();
 
 
         }
@@ -62,17 +57,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Calendar c = Calendar.getInstance();
-                int year = c.get(Calendar.YEAR);
-                int month =c.get(Calendar.MONTH);
-                int day =c.get(Calendar.DAY_OF_MONTH);
-
-                String fecha = day+"/"+month+"/"+year;
+                String nombre = et_nombre.getText().toString();
+                String telefono = et_telefono.getText().toString();
 
 
-                String titulo = et_titulo.getText().toString();
-                Noticia newNoticia =new Noticia(titulo, fecha, "NO DESCRIPTION");
+                if (sh_genero.isChecked()){
+                    genero="F";
+                }else{
+                    genero="M";
+                }
+
+                Noticia newNoticia =new Noticia(nombre, telefono, genero);
                 customAdapter.agregarNoticia(newNoticia);
+
+                sh_genero.setChecked(false);
+                et_nombre.setText("");
+                et_telefono.setText("");
 
 
 

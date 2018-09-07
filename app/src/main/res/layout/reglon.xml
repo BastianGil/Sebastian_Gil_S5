@@ -6,16 +6,19 @@
     android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:textSize="24sp"
+        android:src="@drawable/woman"
         android:text="Titu"
+        android:id="@+id/item_genero"
         />
 <LinearLayout
     android:layout_marginLeft="10dp"
-    android:layout_width="200dp"
+    android:layout_width="185dp"
     android:layout_height="50dp"
+    android:gravity="center"
     android:orientation="vertical">
 
 
@@ -24,18 +27,17 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textColor="#ffffff"
-        android:text="Titulo"
-
-        android:id="@+id/item_titulo"
+        android:text="Nombre"
+        android:id="@+id/item_nombre"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        android:text="frf"
+        android:text="telefono"
 
-        android:id="@+id/item_fecha"
+        android:id="@+id/item_telefono"
         />
 
 
@@ -53,6 +55,9 @@
         android:background="@drawable/botonr"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:textColor="#00578f"
+        android:textSize="20dp"
+        android:text="X"
         android:id="@+id/btn_eliminar"
         />
 

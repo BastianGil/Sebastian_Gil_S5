@@ -3,42 +3,42 @@ package com.example.estudiante.listas_poner;
 public class Noticia {
 
 
-    private String titulo;
-    private String fecha;
+    private String nombre;
+    private String telefono;
+    private String genero;
 
 
-    public Noticia(String titulo, String fecha, String descripcion) {
-        this.titulo = titulo;
-        this.fecha = fecha;
-        this.descripcion = descripcion;
+    public Noticia(String nombre, String telefono, String genero) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.genero = genero;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
-    private String descripcion;
-    //private String urlImg;
+
 
 
 
